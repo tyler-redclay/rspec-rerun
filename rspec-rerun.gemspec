@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.files = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   s.test_files = s.files.grep(/^(spec)\//)
 
-  s.add_runtime_dependency 'rspec'
+  s.add_runtime_dependency 'rspec', '~> 3.0'
   s.add_runtime_dependency 'rspec-mocks', '~> 3.0'
 
   s.add_development_dependency 'rake'
