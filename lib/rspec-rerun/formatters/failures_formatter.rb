@@ -1,7 +1,7 @@
 require 'rspec/core'
 require 'rspec-rerun/rspec'
 
-# if RSpec::Rerun.rspec3?
+if RSpec::Rerun.rspec3?
   begin
     require 'rspec/legacy_formatters'
   rescue LoadError => e
@@ -12,7 +12,7 @@ require 'rspec-rerun/rspec'
     STDERR.puts '*' * 80
     raise
   end
-# end
+end
 
 require 'rspec/core/formatters/base_formatter'
 
