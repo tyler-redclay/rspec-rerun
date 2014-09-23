@@ -26,6 +26,7 @@ module RSpec
           return if failed_examples.empty?
           f = File.new(FILENAME, 'w+')
           failed_examples.each do |example|
+            STDERR.puts retry_command(example)
             f.puts retry_command(example)
           end
           f.close
